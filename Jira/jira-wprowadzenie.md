@@ -4,7 +4,7 @@ Ten wpis wprowadzi Was w narzędzie służące do zarządzania projektami od fir
 ## Spis treści
 * [Czym jest Jira?](#czym-jest-jira)
 * [Jak zacząć?](#jak-zaczac)
-* [Integracja z narzędziami programistycznymi](#integracja-z-narzedziami-programistycznymi)
+* [Integracja z narzędziami programistycznymi](#integracja-z-narzędziami-programistycznymi)
 * [Na koniec ciekawostka](#na-koniec-ciekawostka)
 
 
