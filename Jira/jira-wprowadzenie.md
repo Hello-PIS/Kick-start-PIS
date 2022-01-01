@@ -56,12 +56,15 @@ Utworzone zadanie znajdziemy w Backlogu, aby dodać go do aktualnego sprintu wys
 W podstawowej wersji mamy dostępne 4 rodzaje zgłoszeń
 | Rodzaj            | Opis                |
 | ----------------- |--------------------:|
-| Zadanie           | x                    |
-| Story             | X                    |
-| Epik              |  X                   |
-| Błąd w programie  |   X                  |
+| Story             | Przedstawia funkcje z perspektywy użytkownika. Zlecenia tego typu powinny być definiowane prostym, nietechnicznym językiem, aby były przez wszystkich rozumiane  |
+| Zadanie           | Elementy, nie bezpośrednio związane z wymaganiami użytkownika, jednak będące koniecznymi do wykonania np aktualizacja serwera. Zawierają bardziej szczegółowy i techniczny opis czynności do wykonania. |
+| Epik              | Przedstawiają istotny wynik pracy do której zespół dąży. Grupuje historie, zadania i błędy. |
+| Błąd w programie  | Ułatwiają filtrowanie rzeczy koniecznych do zrobienia. Pozwalają zwrócić szczególną uwagę na błędy. |
+| Pod-zadanie       | Pozwala wydzielać z większego kawałku pracy mniejsze dzięki czemu, łatwiej dzielić się pracą. Stanowią bardzo szczegółowy i techniczny opis problemu. |
 
 W ustawieniach projektu dodatkowo można zdefiniować własne typy zadania odpowiadające naszym potrzebą.
+
+![Rodzaje zadań](https://community.atlassian.com/t5/image/serverpage/image-id/113518i7A32F598297A38B6) 
 
 ### Planowanie zadań
 
@@ -142,4 +145,5 @@ Wnikliwi zapytają: ale dlaczego Gojira? Spróbujcie wykrzyczeć to na głos, ja
 https://www.gojira.pl/2021/01/11/kurs-jira-wprowadzenie/  
 https://confluence.atlassian.com/pages/viewpage.action?pageId=223219957  
 https://www.atlassian.com/pl/software/jira  
-https://stackoverflow.com/questions/4870007/how-to-capture-a-git-commit-message-and-run-an-action
+https://stackoverflow.com/questions/4870007/how-to-capture-a-git-commit-message-and-run-an-action  
+https://community.atlassian.com/t5/Jira-articles/Understanding-issue-types-in-jira/ba-p/1497237 
