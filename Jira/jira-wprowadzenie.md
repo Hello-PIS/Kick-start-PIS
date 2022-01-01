@@ -67,13 +67,13 @@ W ustawieniach projektu dodatkowo można zdefiniować własne typy zadania odpow
 
 W jirze możemy planować dalsze działania w kolejnych sprintach. Przyda nam się do tego tworzenie między zadaniami zależności. Często bywa tak, że przed wykonaniem zadania, musimy wykonać kilka innych kroków.
 
-![Miejsce naszego dashboardu](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-utworzenie-zadania.png) 
+![Miejsce naszego dashboardu](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-utworzone-zadanie.png) 
 
 Tworzenie zależności polega na połączeniu strzałką końca jednego zadania z początkiem drugiego.
 ### Raporty
 Podczas pracy w Jirze automatycznie tworzone są raporty wizualizujące szybkość pracy zespołu, częstotliwość wdrażania rozwiązań czy też spalania zadań.
 
-![Raporty](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-raportu.png) 
+![Raporty](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-raporty.png) 
 
 ### Szybki start od Jira
 W Jirze dostępny jest również `Szybki start` który przeprowadzi nowych użytkowników przez podstawowe funkcje. Znaleźć go można klikając w prawym górnym rogu na ikonę naszego awatara, a następnie przechodząc do zakładki `Otwórz szybki start`.
