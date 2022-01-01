@@ -49,7 +49,7 @@ W górnym pasku mamy niebieski przycisk 'Utwórz'. Po jego naciśnięciu zobaczy
 
 Utworzone zadanie znajdziemy w Backlogu, aby dodać go do aktualnego sprintu, wystarczy, że przeciągniemy je w pole z naszym sprintem.
 
-![Utworzone zadanie](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-utworzenie-zadania.png)
+![Utworzone zadanie](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-tworzenie-zadania.png)
 
 #### Rodzaje zadań
 W podstawowej wersji mamy dostępne 4 rodzaje zgłoszeń
