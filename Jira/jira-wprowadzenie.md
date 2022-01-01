@@ -100,7 +100,7 @@ Porządek w repozytorium kodu jest bardzo ważny. Dobrym pomysłem, jest nawiąz
 #### Konfiguracja skryptu
 
 Należy stworzyć skrypt 'commit-msg' o treści
-'''sh
+```sh
 #!/bin/sh
 
 export MESSAGE=$(<$1)
@@ -113,7 +113,7 @@ fi
 
 echo -e "\e[31mOh no... You forgot to add a JIRA issue number!\e[0m";
 exit 1;
-'''
+```
 Następnie należy przenieść go do lokalizacji '.git/hooks/'
 
 ### Integracja z IDE
