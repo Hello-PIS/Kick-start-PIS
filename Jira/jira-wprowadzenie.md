@@ -1,30 +1,68 @@
 # Jira - wprowadzenie do narzędzia
 Ten wpis wprowadzi Was w narzędzie służące do zarządzania projektami od firmy Atlassian. Mowa oczywiście o Jirze. 
+ 
+## Spis treści
+* [Czym jest Jira?](#czym-jest-jira)
+* [Jak zacząć?](#jak-zaczac)
+* [Integracja z narzędziami programistycznymi](#integracja-z-narzedziami-programistycznymi)
+* [Na koniec ciekawostka](#na-koniec-ciekawostka)
 
+***
+***
 ## Czym jest Jira?
 Cytując oficjalną stronę oprogramowania Jira to:
 > Czołowe narzędzie do tworzenia oprogramowania dla zespołów korzystających z metodyk zwinnych. 
 
 W skrócie Jira to narzędzie do zarządznia pracą zespołu, śledzenia przebiegu procesów, oraz zadań. Dzięki niej, łatwo można sprawdzić aktualne działania grupy, zrobione zadania, jak i czas jaki na nie poświęcono. Dodatkowo w łatwy sposób zaplanujesz dalszą pracę.
-
+***
+***
 ## Jak zacząć?
 
 ### Tworzenie dashboardu dla zespołu
 ### Tworzenie zadania
 ### Planowanie zadań
 
-
+***
+***
 ## Integracja z narzędziami programistycznymi 
 Praca staje się przyjemniejsza gdy monotonne zadania zostają zautomatyzowane. W tym rozdziale, chciałabym przedstawić dwa sposoby na automatyzację pracy z Jirą.
 ### Integracja z repozytorium kodu na GitHubie
+ ***
  Dzięki zainstalowaniu wtyczki [Jira Software + Github](https://github.com/marketplace/jira-software-github) z łatwością można przejść z zadania w Jirze do commitów, branchy czy pull requestów. 
 
 ![Wtyczka Jira Software + Github](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-github-wtyczka.png)
+ 
+ #### Instalacja wtyczki
+Wtyczka jest w pełni darmowa, wystarczy ją zainstalować, a następnie nadać jej odpowiednie uprawnienia. Zostaniemy później przekierowani do strony konfiguracji między Jirą a Githubem. Po wypełnieniu odpowiednio danych, wtyczka rozpocznie swoje działanie.
 
+### Integracja z lokalnym repozytorium
+***
+Porządek w repozytorium kodu jest bardzo ważny. Dobrym pomysłem, jest nawiązywanie w commitach do numerów zadań w Jirze. W konsekwentnym podejściu do tego pomoże nam skrypt. Sprawdzi przed zapisaniem commita czy jego wiadomość zawiera numer zadania w jirze.
 
+![Skrypt dla lokalnego repozytorium](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-git.png)
+ 
 
+#### Konfiguracja skryptu
+
+Należy stworzyć skrypt `commit-msg` o treści
+```sh
+#!/bin/sh
+
+export MESSAGE=$(<$1)
+export JIRA_ISSUE_TAG='HPIS-([0-9]*)'
+
+if [[ $MESSAGE =~ $JIRA_ISSUE_TAG ]]; then
+  echo -e "\e[32mYes! It contains a JIRA issue! Keep it up!\e[0m"
+  exit 0;
+fi
+
+echo -e "\e[31mOh no... You forgot to add a JIRA issue number!\e[0m";
+exit 1;
+```
+Następnie należy przenieść go do lokalizacji .git/hooks/
 
 ### Integracja z IDE
+***
 Podczas pracy w środowisku programistycznym firmy JetBrains przydatną może okazać się wtyczka [Jira Integration](https://plugins.jetbrains.com/plugin/11169-jira-integration). Wszystkie przypisane do Ciebie zadania, znajdziesz właśnie w tym miejscu! Dzięki temu podczas pisania kodu, w łatwy sposób możesz przypomnieć sobie treść zadania nad którym pracujesz.
 
 ![Wtyczka Jira Integration](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-idea-wtyczka.png)
@@ -40,14 +78,17 @@ Kolejny etap to dodanie naszego serwera do obsługiwanych przez wtyczkę. Po nac
 
 Po naciśnięciu przycisku `OK` powinniśmy zobaczyć listę zadań do nas przypisanych.
 
-
+***
+***
 ## Na koniec ciekawostka
 Dlaczego issue tracker od Atlassiana nazywa się Jira? Czy jest to akronim, a jeśli tak to jak się rozwija? Jaka kryje się za tym historia? 
 
 Początkowo w firmię Atlassian do śledzenia błędów (en.: bug trackingu) służyło oprogramowanie o nazwę Bugzilla. W biurzę, programiści między sobą zaczęli nazywać je Gojira (en: Godzilla). Gdy w kolejnych latach firma zdecydowała się na stworzenie własnego narzędzia to śledzenia błędów, (w przyszłości będącego issue trackerem), nazwa tego narzędzia była oczywista. Została lekko zmodyfikowana - usunięto Go i tak powstała Jira.   
 Wnikliwi zapytają: ale dlaczego Gojira? Spróbujcie wykrzyczeć to na głos, jakbyście byli w trakcie bitwy! Brzmi świetnie!
-
+***
+***
 Bibliografia:  
 https://www.gojira.pl/2021/01/11/kurs-jira-wprowadzenie/  
 https://confluence.atlassian.com/pages/viewpage.action?pageId=223219957  
-https://www.atlassian.com/pl/software/jira
+https://www.atlassian.com/pl/software/jira  
+https://stackoverflow.com/questions/4870007/how-to-capture-a-git-commit-message-and-run-an-action
