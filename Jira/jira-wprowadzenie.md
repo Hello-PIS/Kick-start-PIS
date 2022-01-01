@@ -14,9 +14,13 @@ W skrócie Jira to narzędzie do zarządznia pracą zespołu, śledzenia przebie
 ### Planowanie zadań
 
 
-## Integracja z innymi narzędziami 
+## Integracja z narzędziami programistycznymi 
 Praca staje się przyjemniejsza gdy monotonne zadania zostają zautomatyzowane. W tym rozdziale, chciałabym przedstawić dwa sposoby na automatyzację pracy z Jirą.
-### Integracja z repozytorium kodu
+### Integracja z repozytorium kodu na GitHubie
+ Dzięki zainstalowaniu wtyczki [Jira Software + Github](https://github.com/marketplace/jira-software-github) z łatwością można przejść z zadania w Jirze do commitów, branchy czy pull requestów. 
+
+![Wtyczka Jira Software + Github](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-github-wtyczka.png)
+
 
 
 
@@ -29,7 +33,7 @@ Podczas pracy w środowisku programistycznym firmy JetBrains przydatną może ok
 W środowisku programistycznym po naciśnięciu `Ctrl+Shift+A` pojawi się okno, w którym należy wpisać słowo `Plugins`. Następnie zainstalować wtyczkę `Jira Integration`. Ponownie używając skrótu `Ctrl+Shift+A` i wpisać `Jira`. W prawym dolnym rogu pojawi się zakładka z taką samą nazwą. Aby przejść do dalszych konfiguracji kliknij na klucz odpowiadający opcji `Configure Server`.  
 Kolejny etap to dodanie naszego serwera do obsługiwanych przez wtyczkę. Po naciśnięciu `+` przechodzimy do zakładki `API Token`. Następnie uzupełniamy dane. Przykładowo:
 - Server URL: `https://hello-pis.atlassian.net`
-- Email: adres_którym_logujesz_się_do_Jiry@email.com
+- Email: `adres_którym_logujesz_się_do_Jiry@email.com`
 - API Token: Wchodzimy na stronę [Tokeny API](https://id.atlassian.com/manage-profile/security/api-tokens), klikamy `Utwórz Token API`. Wpisujemy tam etykietę, identyfikującą nasz token, a następnie kopiujemy wygenerowany token i wklejamy go do okna wtyczki.
 
 ![Konfigujracja serwera](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/config-idea.png)
