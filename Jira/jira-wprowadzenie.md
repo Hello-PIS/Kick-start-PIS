@@ -35,9 +35,41 @@ Oprogramowanie zaproponuje nam szablon projektu po odpowiedzi na kilka pytań zw
 Klucz projektu będzie składnikiem numeracji zadań w Jirze. Taki sposób numeracji pozwala na łatwą identyfikację, do jakiego zespołu przypisane jest zadanie. 
 Po początkowej konfiguracji naszym oczom ukaże się miejsce na nasz dashboard.
 
-![Miejsce naszego dashboardu](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-strona.png)    
+![Miejsce naszego dashboardu](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-pierwsze-okno.png)   
+
+Aby dokończyć konfiguracje dashboardu, musimy utworzyć nowy sprint. W tym celu przechodzimy do zakładki `Backlog` znajdującej się w lewym panelu. Następnie kilkamy na przycisk `Utwórz sprint`. Jesteśmy gotowi do utworzenia pierwszego zadania.
+
+#### Dodatkowe funkcje
+Istnieje możliwość personalizacji dashboardu. Aby to zrobić przechodzimy do zakładki `Aktywne sprinty` w lewym panelu. Następnie w lewym górnym rogu klikamy na przycisk `***`  gdzie znajdziemy opcje `Ustawienia tablicy`.
+
+Ustawienia te umożliwią nam zarządzanie kolumnami, ich nazwami, przepływami pracy, sposobami na oszacowywanie wielkości zadań czy widoku szczegółów zgłoszeń.
 ### Tworzenie zadania
+W górnym pasku mamy niebieski przycisk `Utwórz`. Po jego naciśnięciu zobaczymy okno, w którym będziemi mogli utworzyć nasze zadanie.
+
+![Formularz do tworzenia zadań](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-tworzenie-zadania.png) 
+
+Utworzone zadanie znajdziemy w Backlogu, aby dodać go do aktualnego sprintu wystarczy, że przeciągniemy je w pole z naszym sprintem.
+
+![Utworzone zadanie](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-utworzenie-zadania.png) 
+
+#### Rodzaje zadań
+W podstawowej wersji mamy dostępne 4 rodzaje zgłoszeń
+| Rodzaj            | Opis                |
+| ----------------- |--------------------:|
+| Zadanie           | x                    |
+| Story             | X                    |
+| Epik              |  X                   |
+| Błąd w programie  |   X                  |
+
+W ustawieniach projektu dodatkowo można zdefiniować własne typy zadania odpowiadające naszym potrzebą.
+
 ### Planowanie zadań
+
+W jirze możemy planować dalsze działania w kolejnych sprintach. Przyda nam się do tego tworzenie między zadaniami zależności. Często bywa tak, że przed wykonaniem zadania, musimy wykonać kilka innych kroków.
+
+![Miejsce naszego dashboardu](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-utworzenie-zadania.png) 
+
+Tworzenie zależności polega na połączeniu strzałką końca jednego zadania z początkiem drugiego.
 ### Raporty
 ### Szybki start od Jira
 W Jirze dostępny jest również `Szybki start` który przeprowadzi nowych użytkowników przez podstawowe funkcje. Znaleźć go można klikając w prawym górnym rogu na ikonę naszego awatara, a następnie przechodząc do zakładki `Otwórz szybki start`.
