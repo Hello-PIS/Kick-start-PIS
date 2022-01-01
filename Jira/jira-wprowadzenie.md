@@ -27,6 +27,7 @@ Kolejny etap to dodanie naszego serwera do obsługiwanych przez wtyczkę. Po nac
 - Email: adres_którym_logujesz_się_do_Jiry@email.com
 - API Token: Wchodzimy na stronę [Tokeny API](https://id.atlassian.com/manage-profile/security/api-tokens), klikamy `Utwórz Token API`. Wpisujemy tam etykietę, identyfikującą nasz token, a następnie kopiujemy wygenerowany token i wklejamy go do okna wtyczki.
 
+![Konfigujracja serwera](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/config-idea.png)
 
 ## Na koniec ciekawostka
 Dlaczego issue tracker od Atlassiana nazywa się Jira? Czy jest to akronim, a jeśli tak to jak się rozwija? Jaka kryje się za tym historia? 
