@@ -36,6 +36,7 @@ Kolejny etap to dodanie naszego serwera do obsługiwanych przez wtyczkę. Po nac
 
 Po naciśnięciu przycisku `OK` powinniśmy zobaczyć listę zadań do nas przypisanych.
 
+
 ## Na koniec ciekawostka
 Dlaczego issue tracker od Atlassiana nazywa się Jira? Czy jest to akronim, a jeśli tak to jak się rozwija? Jaka kryje się za tym historia? 
 
