@@ -14,12 +14,29 @@ Cytując oficjalną stronę oprogramowania Jira to:
 
 W skrócie Jira to narzędzie do zarządznia pracą zespołu, śledzenia przebiegu procesów, oraz zadań. Dzięki niej, łatwo można sprawdzić aktualne działania grupy, zrobione zadania, jak i czas jaki na nie poświęcono. Dodatkowo w łatwy sposób zaplanujesz dalszą pracę.
 
-## Jak zacząć?
+## Jak zacząć?  
+Aby rozpocząć pracę z Jirą należy utworzyć konto na [stronie oprogramowania](https://www.atlassian.com/pl/software/jira/free).  
+W darmowym planie mamy:
+- obsługę do 10 użytkowników
+- 2 GB pamięci
+- tutoriale, dostęp do społeczności
 
-
+Po zalogowaniu nadajemy nazwę witrynie pod którą będzie hostowany nasz dashboard.  
+![Strona startowa](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-strona.png)  
+Następnie odpowiadamy na pytania, które pozwolą oprogramowaniu dostosować rodzaj podpowiadanych tutoriali dotyczących strony.
+Kolejnym krokiem będzie dodanie adresów e-mail członków naszego zespołu, aby mieli dostęp do utworzonego dashboardu.  
 ### Tworzenie dashboardu dla zespołu
+Oprogramowanie zaproponuje nam szablon projektu po odpowiedzi na kilka pytań związanych z naszym zespołem.  
+![Pytania na podstawie których stworzony będzie dashboard](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-projekt.png)    
+![Tworzenie projektu](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-utworz-projekt.png)    
+Klucz projektu będzie składnikiem numeracji zadań w Jirze. Taki sposób numeracji pozwala na łatwą identyfikację, do jakiego zespołu przypisane jest zadanie. 
+Po początkowej konfiguracji naszym oczom ukaże się miejsce na nasz dashboard.
+![Miejsce naszego dashboardu](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-strona.png)    
 ### Tworzenie zadania
 ### Planowanie zadań
+### Raporty
+### Szybki start od Jira
+W Jirze dostępny jest również `Szybki start` który przeprowadzi nowych użytkowników przez podstawowe funkcje. Znaleźć go można klikając w prawym górnym rogu na ikonę naszego awatara, a następnie przechodząc do zakładki `Otwórz szybki start`.
 
 ## Integracja z narzędziami programistycznymi
 Praca staje się przyjemniejsza gdy monotonne zadania zostają zautomatyzowane. W tym rozdziale, chciałabym przedstawić dwa sposoby na automatyzację pracy z Jirą.
@@ -34,7 +51,7 @@ Wtyczka jest w pełni darmowa, wystarczy ją zainstalować, a następnie nadać 
 
 ### Integracja z lokalnym repozytorium
 ***
-Porządek w repozytorium kodu jest bardzo ważny. Dobrym pomysłem, jest nawiązywanie w commitach do numerów zadań w Jirze. W konsekwentnym podejściu do tego pomoże nam skrypt. Sprawdzi przed zapisaniem commita czy jego wiadomość zawiera numer zadania w jirze.
+Porządek w repozytorium kodu jest bardzo ważny. Dobrym pomysłem, jest nawiązywanie w commitach do numerów zadań w Jirze. W konsekwentnym podejściu do tego pomoże nam skrypt. Sprawdzi przed zapisaniem commita czy jego wiadomość zawiera numer zadania w Jirze.
 
 ![Skrypt dla lokalnego repozytorium](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-git.png)
  
@@ -56,7 +73,7 @@ fi
 echo -e "\e[31mOh no... You forgot to add a JIRA issue number!\e[0m";
 exit 1;
 ```
-Następnie należy przenieść go do lokalizacji .git/hooks/
+Następnie należy przenieść go do lokalizacji `.git/hooks/`
 
 ### Integracja z IDE
 ***
@@ -65,7 +82,7 @@ Podczas pracy w środowisku programistycznym firmy JetBrains przydatną może ok
 ![Wtyczka Jira Integration](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-idea-wtyczka.png)
 
 #### Instalacja wtyczki
-W środowisku programistycznym po naciśnięciu `Ctrl+Shift+A` pojawi się okno, w którym należy wpisać słowo `Plugins`. Następnie zainstalować wtyczkę `Jira Integration`. Ponownie używając skrótu `Ctrl+Shift+A` i wpisać `Jira`. W prawym dolnym rogu pojawi się zakładka z taką samą nazwą. Aby przejść do dalszych konfiguracji kliknij na klucz odpowiadający opcji `Configure Server`.  
+W środowisku programistycznym po naciśnięciu `Ctrl+Shift+A` pojawi się okno, w którym należy wpisać słowo `Plugins`. Następnie zainstalować wtyczkę `Jira Integration`. Ponownie używając skrótu `Ctrl+Shift+A` i wpisać `Jira`. W lewym dolnym rogu pojawi się zakładka z taką samą nazwą. Aby przejść do dalszych konfiguracji kliknij na klucz odpowiadający opcji `Configure Server`.  
 Kolejny etap to dodanie naszego serwera do obsługiwanych przez wtyczkę. Po naciśnięciu `+` przechodzimy do zakładki `API Token`. Następnie uzupełniamy dane. Przykładowo:
 - Server URL: `https://hello-pis.atlassian.net`
 - Email: `adres_którym_logujesz_się_do_Jiry@email.com`
