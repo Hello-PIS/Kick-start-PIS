@@ -22,15 +22,19 @@ W darmowym planie mamy:
 - tutoriale, dostęp do społeczności
 
 Po zalogowaniu nadajemy nazwę witrynie pod którą będzie hostowany nasz dashboard.  
+
 ![Strona startowa](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-strona.png)  
 Następnie odpowiadamy na pytania, które pozwolą oprogramowaniu dostosować rodzaj podpowiadanych tutoriali dotyczących strony.
 Kolejnym krokiem będzie dodanie adresów e-mail członków naszego zespołu, aby mieli dostęp do utworzonego dashboardu.  
 ### Tworzenie dashboardu dla zespołu
 Oprogramowanie zaproponuje nam szablon projektu po odpowiedzi na kilka pytań związanych z naszym zespołem.  
+
 ![Pytania na podstawie których stworzony będzie dashboard](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-projekt.png)    
-![Tworzenie projektu](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-utworz-projekt.png)    
+![Tworzenie projektu](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-utworz-projekt.png)  
+
 Klucz projektu będzie składnikiem numeracji zadań w Jirze. Taki sposób numeracji pozwala na łatwą identyfikację, do jakiego zespołu przypisane jest zadanie. 
 Po początkowej konfiguracji naszym oczom ukaże się miejsce na nasz dashboard.
+
 ![Miejsce naszego dashboardu](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-strona.png)    
 ### Tworzenie zadania
 ### Planowanie zadań
