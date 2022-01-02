@@ -143,5 +143,5 @@ Wnikliwi zapytają: ale dlaczego Gojira? Spróbujcie wykrzyczeć to na głos, ja
 https://www.gojira.pl/2021/01/11/kurs-jira-wprowadzenie/  
 https://confluence.atlassian.com/pages/viewpage.action?pageId=223219957  
 https://www.atlassian.com/pl/software/jira  
-https://stackoverflow.com/questions/4870007/how-to-capture-a-git-commit-message-and-run-an-action  
+https://gist.github.com/veewee/939539fef7953bd11cdb   
 https://community.atlassian.com/t5/Jira-articles/Understanding-issue-types-in-jira/ba-p/1497237   
