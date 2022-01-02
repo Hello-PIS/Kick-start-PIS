@@ -61,13 +61,13 @@ W podstawowej wersji mamy dostępne 4 rodzaje zgłoszeń
 | Błąd w programie | Ułatwiają filtrowanie rzeczy koniecznych do zrobienia. Pozwalają zwrócić szczególną uwagę na błędy. |
 | Pod-zadanie | Pozwala wydzielać z większego kawałku pracy mniejsze dzięki czemu, łatwiej dzielić się pracą. Stanowią bardzo szczegółowy i techniczny opis problemu. |
 
-W ustawieniach projektu dodatkowo można zdefiniować własne typy zadania odpowiadające naszym potrzebą.
+W ustawieniach projektu dodatkowo można zdefiniować własne typy zadania odpowiadające naszym potrzebom.
 
 ![Rodzaje zadań](https://community.atlassian.com/t5/image/serverpage/image-id/113518i7A32F598297A38B6)
 
 ### Planowanie zadań
 
-W Jirze możemy planować dalsze działania w kolejnych sprintach. Przyda nam się do tego tworzenie między zadaniami zależności. Często bywa tak, że przed wykonaniem zadania, musimy wykonać kilka innych kroków.
+W Jirze możemy planować dalsze działania w kolejnych sprintach. Skorzystamy z funkcji tworzenie między zadaniami zależności. Często bywa tak, że przed wykonaniem zadania, musimy wykonać kilka innych kroków.
 
 ![Tablica z utworzonym zadaniem](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-utworzone-zadanie.png)
 
@@ -81,7 +81,7 @@ Podczas pracy w Jirze automatycznie tworzone są raporty wizualizujące szybkoś
 W Jirze dostępny jest również `Szybki start` który przeprowadzi nowych użytkowników przez podstawowe funkcje. Znaleźć go można klikając w prawym górnym rogu na ikonę naszego awatara, a następnie przechodząc do zakładki `Otwórz szybki start`.
 
 ## Integracja z narzędziami programistycznymi
-Praca staje się przyjemniejsza, gdy monotonne zadania zostają zautomatyzowane. W tym rozdziale chciałabym przedstawić kilka sposobów na automatyzację pracy z Jirą.
+Praca staje się przyjemniejsza, gdy monotonne zadania zostają zautomatyzowane. W tej sekcji poznamy kilka sposobów na automatyzację pracy z Jirą.
 ### Integracja z repozytorium kodu na GitHubie
 ***
 Dzięki zainstalowaniu wtyczki [Jira Software + Github](https://github.com/marketplace/jira-software-github) z łatwością można przejść z zadania w Jirze do commitów, branchy czy pull requestów.
@@ -123,7 +123,7 @@ Podczas pracy w środowisku programistycznym firmy JetBrains przydatną może ok
 ![Wtyczka Jira Integration](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-idea-wtyczka.png)
 
 #### Instalacja wtyczki
-W środowisku programistycznym po naciśnięciu `Ctrl+Shift+A` pojawi się okno, w którym należy wpisać słowo `Plugins`. Następnie zainstalować wtyczkę `Jira Integration`. Ponownie używając skrótu `Ctrl+Shift+A` i wpisać `Jira`. W lewym dolnym rogu pojawi się zakładka z taką samą nazwą. Aby przejść do dalszych konfiguracji, kliknij klucz odpowiadający opcji `Configure Server`.
+W środowisku programistycznym po naciśnięciu `Ctrl+Shift+A` pojawi się okno, w którym należy wpisać słowo `Plugins`. Następnie zainstalować wtyczkę `Jira Integration`. Ponownie używając skrótu `Ctrl+Shift+A` należy wpisać `Jira`. W lewym dolnym rogu pojawi się zakładka z taką samą nazwą. Aby przejść do dalszych konfiguracji, kliknij klucz odpowiadający opcji `Configure Server`.
 Kolejny etap to dodanie naszego serwera do obsługiwanych przez wtyczkę. Po naciśnięciu `+` przechodzimy do zakładki `API Token`. Następnie uzupełniamy dane. Przykładowo:
 - Server URL: `https://hello-pis.atlassian.net`
 - Email: `adres_którym_logujesz_się_do_Jiry@email.com`
