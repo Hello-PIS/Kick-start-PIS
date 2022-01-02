@@ -55,7 +55,7 @@ Utworzone zadanie znajdziemy w Backlogu, aby dodać go do aktualnego sprintu, wy
 W podstawowej wersji mamy dostępne 4 rodzaje zgłoszeń
 | Rodzaj | Opis |
 | ----------------- |--------------------:|
-| Story | Przedstawia funkcje z perspektywy użytkownika. Zlecenia tego typu powinny być definiowane prostym, nietechnicznym językiem, aby były przez wszystkich rozumiane |
+| Story | Przedstawia funkcje z perspektywy użytkownika. Zlecenia tego typu powinny być definiowane prostym, nietechnicznym językiem, aby były przez wszystkich rozumiane. |
 | Zadanie | Elementy, nie bezpośrednio związane z wymaganiami użytkownika, jednak będące koniecznymi do wykonania np. aktualizacja serwera. Zawierają bardziej szczegółowy i techniczny opis czynności do wykonania. |
 | Epik | Przedstawiają istotny wynik pracy, do której zespół dąży. Grupuje historie, zadania i błędy. |
 | Błąd w programie | Ułatwiają filtrowanie rzeczy koniecznych do zrobienia. Pozwalają zwrócić szczególną uwagę na błędy. |
