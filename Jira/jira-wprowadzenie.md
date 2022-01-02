@@ -36,14 +36,14 @@ Po początkowej konfiguracji naszym oczom ukaże się miejsce na naszą tablicę
 
 ![Miejsce naszego tablicy](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-pierwsze-okno.png)
 
-Aby dokończyć konfiguracje tablicy, musimy utworzyć nowy sprint. W tym celu przechodzimy do zakładki 'Backlog' znajdującej się w lewym panelu. Następnie klikami na przycisk 'Utwórz sprint'. Jesteśmy gotowi do utworzenia pierwszego zadania.
+Aby dokończyć konfiguracje tablicy, musimy utworzyć nowy sprint. W tym celu przechodzimy do zakładki `Backlog` znajdującej się w lewym panelu. Następnie klikami na przycisk `Utwórz sprint`. Jesteśmy gotowi do utworzenia pierwszego zadania.
 
 #### Dodatkowe funkcje
-Istnieje możliwość personalizacji tablicy. Aby to zrobić, przechodzimy do zakładki 'Aktywne sprinty' w lewym panelu. Następnie w lewym górnym rogu klikamy na przycisk '***' gdzie znajdziemy opcje 'Ustawienia tablicy'.
+Istnieje możliwość personalizacji tablicy. Aby to zrobić, przechodzimy do zakładki `Aktywne sprinty` w lewym panelu. Następnie w lewym górnym rogu klikamy na przycisk `***` gdzie znajdziemy opcje `Ustawienia tablicy`.
 
 Ustawienia te umożliwią nam zarządzanie kolumnami, ich nazwami, przepływami pracy, sposobami na oszacowywanie wielkości zadań czy widoku szczegółów zgłoszeń.
 ### Tworzenie zadania
-W górnym pasku mamy niebieski przycisk 'Utwórz'. Po jego naciśnięciu zobaczymy okno, w którym będziemy mogli utworzyć nasze zadanie.
+W górnym pasku mamy niebieski przycisk `Utwórz`. Po jego naciśnięciu zobaczymy okno, w którym będziemy mogli utworzyć nasze zadanie.
 
 ![Formularz do tworzenia zadań](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-tworzenie-zadania.png)
 
@@ -78,7 +78,7 @@ Podczas pracy w Jirze automatycznie tworzone są raporty wizualizujące szybkoś
 ![Raporty](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-raporty.png)
 
 ### Szybki start od Jira
-W Jirze dostępny jest również 'Szybki start' który przeprowadzi nowych użytkowników przez podstawowe funkcje. Znaleźć go można klikając w prawym górnym rogu na ikonę naszego awatara, a następnie przechodząc do zakładki 'Otwórz szybki start'.
+W Jirze dostępny jest również `Szybki start` który przeprowadzi nowych użytkowników przez podstawowe funkcje. Znaleźć go można klikając w prawym górnym rogu na ikonę naszego awatara, a następnie przechodząc do zakładki `Otwórz szybki start`.
 
 ## Integracja z narzędziami programistycznymi
 Praca staje się przyjemniejsza, gdy monotonne zadania zostają zautomatyzowane. W tym rozdziale chciałabym przedstawić kilka sposobów na automatyzację pracy z Jirą.
@@ -99,12 +99,12 @@ Porządek w repozytorium kodu jest bardzo ważny. Dobrym pomysłem, jest nawiąz
 
 #### Konfiguracja skryptu
 
-Należy stworzyć skrypt 'commit-msg' o treści
-'''sh
+Należy stworzyć skrypt `commit-msg` o treści
+```sh
 #!/bin/sh
 
 export MESSAGE=$(<$1)
-export JIRA_ISSUE_TAG='HPIS-([0-9]*)'
+export JIRA_ISSUE_TAG=`HPIS-([0-9]*)`
 
 if [[ $MESSAGE =~ $JIRA_ISSUE_TAG ]]; then
 echo -e "\e[32mYes! It contains a JIRA issue! Keep it up!\e[0m"
@@ -113,8 +113,8 @@ fi
 
 echo -e "\e[31mOh no... You forgot to add a JIRA issue number!\e[0m";
 exit 1;
-'''
-Następnie należy przenieść go do lokalizacji '.git/hooks/'
+```
+Następnie należy przenieść go do lokalizacji `.git/hooks/`
 
 ### Integracja z IDE
 ***
@@ -123,15 +123,15 @@ Podczas pracy w środowisku programistycznym firmy JetBrains przydatną może ok
 ![Wtyczka Jira Integration](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/jira-idea-wtyczka.png)
 
 #### Instalacja wtyczki
-W środowisku programistycznym po naciśnięciu 'Ctrl+Shift+A' pojawi się okno, w którym należy wpisać słowo 'Plugins'. Następnie zainstalować wtyczkę 'Jira Integration'. Ponownie używając skrótu 'Ctrl+Shift+A' i wpisać 'Jira'. W lewym dolnym rogu pojawi się zakładka z taką samą nazwą. Aby przejść do dalszych konfiguracji, kliknij klucz odpowiadający opcji 'Configure Server'.
-Kolejny etap to dodanie naszego serwera do obsługiwanych przez wtyczkę. Po naciśnięciu '+' przechodzimy do zakładki 'API Token'. Następnie uzupełniamy dane. Przykładowo:
-- Server URL: 'https://hello-pis.atlassian.net'
-- Email: 'adres_którym_logujesz_się_do_Jiry@email.com'
-- API Token: Wchodzimy na stronę [Tokeny API](https://id.atlassian.com/manage-profile/security/api-tokens), klikamy 'Utwórz Token API'. Wpisujemy tam etykietę, identyfikującą nasz token, a następnie kopiujemy wygenerowany token i wklejamy go do okna wtyczki.
+W środowisku programistycznym po naciśnięciu `Ctrl+Shift+A` pojawi się okno, w którym należy wpisać słowo `Plugins`. Następnie zainstalować wtyczkę `Jira Integration`. Ponownie używając skrótu `Ctrl+Shift+A` i wpisać `Jira`. W lewym dolnym rogu pojawi się zakładka z taką samą nazwą. Aby przejść do dalszych konfiguracji, kliknij klucz odpowiadający opcji `Configure Server`.
+Kolejny etap to dodanie naszego serwera do obsługiwanych przez wtyczkę. Po naciśnięciu `+` przechodzimy do zakładki `API Token`. Następnie uzupełniamy dane. Przykładowo:
+- Server URL: `https://hello-pis.atlassian.net`
+- Email: `adres_którym_logujesz_się_do_Jiry@email.com`
+- API Token: Wchodzimy na stronę [Tokeny API](https://id.atlassian.com/manage-profile/security/api-tokens), klikamy `Utwórz Token API`. Wpisujemy tam etykietę, identyfikującą nasz token, a następnie kopiujemy wygenerowany token i wklejamy go do okna wtyczki.
 
 ![Konfigujracja serwera](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Jira/photos/config-idea.png)
 
-Po naciśnięciu przycisku 'OK' powinniśmy zobaczyć listę zadań do nas przypisanych.
+Po naciśnięciu przycisku `OK` powinniśmy zobaczyć listę zadań do nas przypisanych.
 
 ## Na koniec ciekawostka
 Dlaczego issue tracker od Atlassiana nazywa się Jira? Czy jest to akronim, a jeśli tak to, jak się rozwija? Jaka kryje się za tym historia?
