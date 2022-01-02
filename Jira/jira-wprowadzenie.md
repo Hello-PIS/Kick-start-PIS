@@ -140,8 +140,8 @@ Początkowo w firmię Atlassian do śledzenia błędów (en.: bug trackingu) sł
 Wnikliwi zapytają: ale dlaczego Gojira? Spróbujcie wykrzyczeć to na głos, jakbyście byli w trakcie bitwy! Brzmi świetnie!
 
 ## Bibliografia:
-https://www.gojira.pl/2021/01/11/kurs-jira-wprowadzenie/
-https://confluence.atlassian.com/pages/viewpage.action?pageId=223219957
-https://www.atlassian.com/pl/software/jira
-https://stackoverflow.com/questions/4870007/how-to-capture-a-git-commit-message-and-run-an-action
-https://community.atlassian.com/t5/Jira-articles/Understanding-issue-types-in-jira/ba-p/1497237 
+https://www.gojira.pl/2021/01/11/kurs-jira-wprowadzenie/  
+https://confluence.atlassian.com/pages/viewpage.action?pageId=223219957  
+https://www.atlassian.com/pl/software/jira  
+https://stackoverflow.com/questions/4870007/how-to-capture-a-git-commit-message-and-run-an-action  
+https://community.atlassian.com/t5/Jira-articles/Understanding-issue-types-in-jira/ba-p/1497237   
