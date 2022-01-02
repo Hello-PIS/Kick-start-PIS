@@ -41,7 +41,7 @@ Aby dokończyć konfiguracje tablicy, musimy utworzyć nowy sprint. W tym celu p
 #### Dodatkowe funkcje
 Istnieje możliwość personalizacji tablicy. Aby to zrobić, przechodzimy do zakładki `Aktywne sprinty` w lewym panelu. Następnie w lewym górnym rogu klikamy na przycisk `***` gdzie znajdziemy opcje `Ustawienia tablicy`.
 
-Ustawienia te umożliwią nam zarządzanie kolumnami, ich nazwami, przepływami pracy, sposobami na oszacowywanie wielkości zadań czy widoku szczegółów zgłoszeń.
+Ustawienia te umożliwią nam zarządzanie kolumnami, ich nazwami, przepływami pracy, sposobami na oszacowywanie wielkości zadań czy widokiem szczegółów zgłoszeń.
 ### Tworzenie zadania
 W górnym pasku mamy niebieski przycisk `Utwórz`. Po jego naciśnięciu zobaczymy okno, w którym będziemy mogli utworzyć nasze zadanie.
 
