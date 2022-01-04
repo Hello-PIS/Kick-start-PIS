@@ -104,7 +104,7 @@ Poniżej znajduje się struktura stworzonego przez nas projektu:
 Dzięki `gradle init` uzyskaliśmy konfigurację projektu, dzięki czemu możemy teraz zbudować aplikację w Kotlinie :D 
 
 ### Uruchomienie aplikacji
-Wreszcie możemy uruchomić naszą aplikację bezpośrednio z wiersza poleceń za pomocą `./gradlew run`.  Po uruchomieniu stworzonej przez nas wcześniej aplikacji uzyskamy poniższy wynik:
+Teraz możemy uruchomić naszą aplikację bezpośrednio z wiersza poleceń za pomocą `./gradlew run`.  Po uruchomieniu stworzonej przez nas wcześniej aplikacji uzyskamy poniższy wynik:
 
 ```
 > Task :app:compileKotlin
@@ -122,12 +122,12 @@ Istnieje więcej poleceń Gradle. Tutaj omówię jeszcze jedno - `./gradlew buil
 
 Jeśli używamy *gradlew* nie potrzebujemy instalować Gradle lokalnie, co jest bardzo dużą zaletą tego rozwiązania. Dodatkowo spakowany plik, który wygenerujemy będzie spójny za każdym razem. Jest to szczególnie ważne podczas pracy w grupie, ponieważ każdy może posiadać inną wersję Gradle na swoim komputerze. 
 
-Powyższe polecenie możemy uruchomić również z flagą `--scan`, dzięki czemu możemy zobaczyć szczegóły co zostało wykonane - jakie zadania zostały wykonane, jakie zależności zostały pobrane itp.  Skan kompilacji zostanie opublikowany na stronie, a link do niej zostanie nam podany po zakończeniu wywołania polecenia. Poniższej znajduje się screen ze strony zawierającej szczegóły odnośnie naszego przykładowego projektu:
+Powyższe polecenie możemy uruchomić również z flagą `--scan`, dzięki czemu możemy zobaczyć szczegóły co zostało wykonane - jakie zadania zostały wykonane, jakie zależności zostały pobrane itp.  Skan kompilacji zostanie opublikowany na stronie, a link do niej zostanie nam podany po zakończeniu wywołania polecenia. Poniżej znajduje się screen ze strony zawierającej szczegóły odnośnie naszego przykładowego projektu:
 
 ![Skan](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/scan.PNG)
 
 ### Przejrzenie utworzonych plików
-Poprzednie dwa kroki wystarczą, aby rozpocząć tworzenie aplikacji. Jeśli jednak chcemy zrozumieć, czym są, co zawierają i co robią utworzone pliki. W tym podrozdziale skupimy się właśnie na nich. 
+Poprzednie kroki wystarczą, aby rozpocząć tworzenie aplikacji. Jeśli jednak chcemy zrozumieć, czym są, co zawierają i co robią utworzone pliki to właśnie w tym podrozdziale skupimy się na nich. 
 
 Na początku spojrzymy na plik `settings.gradle`. 
 ```kotlin
@@ -176,9 +176,9 @@ W `repositories` deklarowane są publicznie dostępne repozytoria - w tym przypa
 W `dependencies` zarządzamy zależnościami:
 - biblioteka `kotlin-bom` wyrównuje wszystkie komponenty z tej samej wersji,
 - `org.jetbrains.kotlin:kotlin-stdlib-jdk8` definiuje, iż chcemy skorzystać ze standardowej biblioteki Kotlin JDK8,
-- `com.google.guava:guava:30.1.1-jre` - definiuje, iż chcemy skorzystać w naszej aplikacji z Guavy. Guava to zestaw podstawowych bibliotek Google dla języka Java,
-- `org.jetbrains.kotlin:kotlin-test` - definiuje, iż chcemy skorzystać z biblioteki testowej Kotlin,
-- `org.jetbrains.kotlin:kotlin-test-junit` - definiuje, iż chcemy skorzystać z Kotlin JUnit.
+- `com.google.guava:guava:30.1.1-jre` definiuje, iż chcemy skorzystać w naszej aplikacji z Guavy. Guava to zestaw podstawowych bibliotek Google dla języka Java,
+- `org.jetbrains.kotlin:kotlin-test` definiuje, iż chcemy skorzystać z biblioteki testowej Kotlin,
+- `org.jetbrains.kotlin:kotlin-test-junit` definiuje, iż chcemy skorzystać z Kotlin JUnit.
 
 W `application` zdefiniowana jest główna klasa aplikacji, czyli `kick_start.AppKt`.
 
