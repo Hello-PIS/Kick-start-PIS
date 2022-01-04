@@ -9,7 +9,8 @@ Poniższy artykuł poświęcony jest narzędziu służącemu do budowy projektó
 	 2. [Budowanie aplikacji](#budowanie-aplikacji) 
 	 3. [Uruchomienie aplikacji](#uruchomienie-aplikacji) 
 	 4. [Dodatkowe polecenia Gradle](#dodatkowe-polecenia-gradle) 
-	 5. [Przejrzenie utworzonych plików](#przejrzenie-utworzonych-plików) 
+	 5. [Przejrzenie utworzonych plików](#przejrzenie-utworzonych-plików)
+ 4. [Gradle vs Maven ](#gradle-vs-maven)  
  5. [Bibliografia ](#bibliografia )
 
 ## Czym w ogóle jest Gradle? 
@@ -182,6 +183,24 @@ W `dependencies` zarządzamy zależnościami:
 
 W `application` zdefiniowana jest główna klasa aplikacji, czyli `kick_start.AppKt`.
 
+ ## Gradle vs Maven 
+ Zarówno Gradle jak i Maven służą do budowy projektów. Poniżej znajduje się tabela przedstawiająca najważniejsze różnice między tymi narzędziami.
+ 
+ 
+| Gradle| Maven |
+|--|--|
+| Unika kompilacji | Kompilacja jest obowiązkowa |
+| Używa DSL (Domain-specific language) do tworzenia struktury projektu| Używa XML do tworzenia struktury projektu |
+| Główny cel to dodanie funkcjonalności do projektu | Skupiony na tworzeniu aplikacji w określonym czasie |
+ Nowe narzędzie, potrzeba czasu, aby się z nim zapoznać| Znane narzędzie |
+ | Zoptymalizowane pod kątem śledzenia tylko bieżącego uruchomionego zadania - uruchamia tylko te zadania, które zostały zmienione | Nie używa pamięci podręcznej - czas budowy jest dłuższy |
+ | System automatyzacji kompilacji | System zarządzania projektami oprogramowania |
+
+Poniżej znajdują się również wykresy porównujące wydajność Gradle i Maven. Na wykresie przedstawiony został czas, w jakim oba narzędzia zbudowały średni projekt zawierający podprojekty:
+
+ ![Wykres](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/speed.png)
+
+Gradle jest zdecydowanie wydajniejszy niż Maven. Zgodnie z pomiarami ze strony *gradle.org*, Gradle potrafi być do 100 razy szybszy niż Maven.
 ## Bibliografia 
  - https://docs.gradle.org/current/userguide/what_is_gradle.html
  - https://docs.gradle.org/current/userguide/getting_started.html
@@ -192,4 +211,5 @@ W `application` zdefiniowana jest główna klasa aplikacji, czyli `kick_start.Ap
  - https://stackoverflow.com/questions/59790315/what-does-kotlin-bom-library-do
  - https://github.com/google/guava
  - https://tomgregory.com/gradle-vs-gradlew-difference/
+ - https://gradle.org/gradle-vs-maven-performance/
 
