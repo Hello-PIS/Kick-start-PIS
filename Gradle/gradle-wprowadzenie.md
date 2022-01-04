@@ -186,9 +186,8 @@ W `application` zdefiniowana jest główna klasa aplikacji, czyli `kick_start.Ap
  ## Gradle vs Maven 
  Zarówno Gradle jak i Maven służą do budowy projektów. Poniżej znajduje się tabela przedstawiająca najważniejsze różnice między tymi narzędziami.
  
- 
 | Gradle| Maven |
-|--|--|
+| :--: | :--: |
 | Unika kompilacji | Kompilacja jest obowiązkowa |
 | Używa DSL (Domain-specific language) do tworzenia struktury projektu| Używa XML do tworzenia struktury projektu |
 | Główny cel to dodanie funkcjonalności do projektu | Skupiony na tworzeniu aplikacji w określonym czasie |
@@ -196,7 +195,8 @@ W `application` zdefiniowana jest główna klasa aplikacji, czyli `kick_start.Ap
  | Zoptymalizowane pod kątem śledzenia tylko bieżącego uruchomionego zadania - uruchamia tylko te zadania, które zostały zmienione | Nie używa pamięci podręcznej - czas budowy jest dłuższy |
  | System automatyzacji kompilacji | System zarządzania projektami oprogramowania |
 
-Poniżej znajdują się również wykresy porównujące wydajność Gradle i Maven. Na wykresie przedstawiony został czas, w jakim oba narzędzia zbudowały średni złożony projekt:
+
+Poniżej znajdują się również wykresy porównujące wydajność Gradle i Maven. Na wykresie przedstawiony został czas, w jakim oba narzędzia zbudowały średni, złożony projekt:
 
  ![Wykres](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/speed.png)
 
