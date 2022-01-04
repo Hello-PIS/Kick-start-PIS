@@ -125,7 +125,7 @@ Jeśli używamy *gradlew* nie potrzebujemy instalować Gradle lokalnie, co jest 
 
 Powyższe polecenie możemy uruchomić również z flagą `--scan`, dzięki czemu możemy zobaczyć szczegóły co zostało wykonane - jakie zadania zostały wykonane, jakie zależności zostały pobrane itp.  Skan kompilacji zostanie opublikowany na stronie, a link do niej zostanie nam podany po zakończeniu wywołania polecenia. Poniższej znajduje się screen ze strony zawierającej szczegóły odnośnie naszego przykładowego projektu:
 
-![Skan](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/scan.png)
+![Skan](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/scan.PNG)
 
 
 ### Przejrzenie utworzonych plików
