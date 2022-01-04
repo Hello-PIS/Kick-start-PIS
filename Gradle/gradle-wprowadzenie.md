@@ -28,7 +28,7 @@ W **fazie inicjalizacji** Gradle określa jakie projekty wchodzą w skład nasze
 
 Gradle modeluje proces budowy jako ukierunkowany graf acykliczny (DAG) zadań. Kompilacja konfiguruje zestawy zadań i łączy je ze sobą w oparciu o ich zależność. Dzięki temu powstaje DAG. Poniżej znajdują się dwa przykładowe wykresy zadań. Wykres po lewej jest wykresem abstrakcyjnym. Oba wykresy pochodzą z oficjalnej strony Gradle. 
 
-![Wykresy](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/dag.png)
+![Wykresy](./photos/dag.png)
 
 ## Pierwsze kroki
 W tym rozdziale opiszę od czego należy zacząć przygodę z Gradle.
@@ -125,7 +125,7 @@ Jeśli używamy *gradlew* nie potrzebujemy instalować Gradle lokalnie, co jest 
 
 Powyższe polecenie możemy uruchomić również z flagą `--scan`, dzięki czemu możemy zobaczyć szczegóły co zostało wykonane - jakie zadania zostały wykonane, jakie zależności zostały pobrane itp.  Skan kompilacji zostanie opublikowany na stronie, a link do niej zostanie nam podany po zakończeniu wywołania polecenia. Poniżej znajduje się screen ze strony zawierającej szczegóły odnośnie naszego przykładowego projektu:
 
-![Skan](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/scan.PNG)
+![Skan](./photos/scan.PNG)
 
 ### Przejrzenie utworzonych plików
 Poprzednie kroki wystarczą, aby rozpocząć tworzenie aplikacji. Jeśli jednak chcemy zrozumieć, czym są, co zawierają i co robią utworzone pliki to właśnie w tym podrozdziale skupimy się na nich. 
@@ -198,7 +198,7 @@ W `application` zdefiniowana jest główna klasa aplikacji, czyli `kick_start.Ap
 
 Poniżej znajdują się również wykresy porównujące wydajność Gradle i Maven. Na wykresie przedstawiony został czas, w jakim oba narzędzia zbudowały średni, złożony projekt:
 
- ![Wykres](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/speed.png)
+ ![Wykres](./photos/speed.png)
 
 Gradle jest zdecydowanie wydajniejszy niż Maven. Zgodnie z pomiarami ze strony *gradle.org*, Gradle potrafi być do 100 razy szybszy niż Maven.
 ## Bibliografia 
