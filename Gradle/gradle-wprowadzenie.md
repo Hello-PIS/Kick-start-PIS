@@ -196,7 +196,7 @@ W `application` zdefiniowana jest główna klasa aplikacji, czyli `kick_start.Ap
  | Zoptymalizowane pod kątem śledzenia tylko bieżącego uruchomionego zadania - uruchamia tylko te zadania, które zostały zmienione | Nie używa pamięci podręcznej - czas budowy jest dłuższy |
  | System automatyzacji kompilacji | System zarządzania projektami oprogramowania |
 
-Poniżej znajdują się również wykresy porównujące wydajność Gradle i Maven. Na wykresie przedstawiony został czas, w jakim oba narzędzia zbudowały średni projekt zawierający podprojekty:
+Poniżej znajdują się również wykresy porównujące wydajność Gradle i Maven. Na wykresie przedstawiony został czas, w jakim oba narzędzia zbudowały średni złożony projekt:
 
  ![Wykres](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/speed.png)
 
