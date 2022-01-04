@@ -1,0 +1,1 @@
+# Gradle - wprowadzenie do narzędzia
