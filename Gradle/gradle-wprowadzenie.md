@@ -1,6 +1,18 @@
 # Gradle - kick start
 Poniższy artykuł poświęcony jest narzędziu służącemu do budowy projektów, czyli **Gradle**. 
 
+### Spis treści
+ 1. [Czym w ogóle jest Gradle?](#czym-w-ogóle-jest-gradle) 
+ 2. [Trochę teorii](#trochę-teorii) 
+ 3. [Pierwsze kroki](#pierwsze-kroki) 
+	 1. [Instalacja](#instalacja) 
+	 2. [Budowanie aplikacji](#budowanie-aplikacji) 
+	 3. [Uruchomienie aplikacji](#uruchomienie-aplikacji) 
+	 4. [Dodatkowe polecenia Gradle](#dodatkowe-polecenia-gradle) 
+	 5. [Przejrzenie utworzonych plików](#przejrzenie-utworzonych-plików) 
+ 5. [Bibliografia ](#bibliografia )
+
+
 ## Czym w ogóle jest Gradle? 
 Zgodnie z opisem podanym przez twórcę Gradle jest narzędziem do automatyzacji kompilacji do tworzenia oprogramowania w wielu językach. Opisując Gradla własnymi słowami powiedziałabym, iż jest to elastyczne narzędzie, które służy do budowy projektów. 
 
