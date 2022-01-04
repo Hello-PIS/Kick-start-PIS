@@ -18,6 +18,87 @@ Gradle modeluje proces budowy jako ukierunkowany graf acykliczny (DAG) zadań. K
 
 ![Wykresy](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/dag.png)
 
+## Pierwsze kroki
+W tym rozdziale opiszę od czego należy zacząć przygodę z Gradle.
+
+### Instalacja
+Jeśli nigdy wcześniej nie miałeś do czynienia z Gradlem, swoją przygodę powinieneś zacząć od jego instalacji. Jeśli chcesz tylko uruchomić istniejącą kompilację Gradle nie zawsze musisz instalować Gradle, jednak w tym poradniku skupimy się na tworzeniu własnej kompilacji. Wszelkie informacje odnośnie instalacji Gradle znajdują się na oficjalnej stronie  - [o tutaj](https://docs.gradle.org/current/userguide/installation.html).
+
+### Budowanie aplikacji
+Aby inicjować nowy projekt Gradle potrzebujemy pustego folderu, w którym znajdować będzie się nasz projekt. W pustym folderze uruchamiamy polecenie `gradle init`, które rozpocznie inicjalizację nowego projektu. W terminalu ukażą się nam pytania o kilka ustawień. Poniższa konfiguracja jest pokazana dla aplikacji w języku Kotlin.
+
+```
+Select type of project to generate:
+  1: basic
+  2: application
+  3: library
+  4: Gradle plugin
+Enter selection (default: basic) [1..4] 2
+
+Select implementation language:
+  1: C++
+  2: Groovy
+  3: Java
+  4: Kotlin
+  5: Scala
+  6: Swift
+Enter selection (default: Java) [1..6] 4
+
+Split functionality across multiple subprojects?:
+  1: no - only one application project
+  2: yes - application and library projects
+Enter selection (default: no - only one application project) [1..2] 1
+
+Select build script DSL:
+  1: Groovy
+  2: Kotlin
+Enter selection (default: Kotlin) [1..2] 1
+
+Generate build using new APIs and behavior (some features may change in the next minor release)? (default: no) [yes, no]
+                                                                                                                       no
+
+Project name (default: test): kick_start
+Source package (default: kick_start): kick_start
+
+> Task :init
+Get more help with your project: https://docs.gradle.org/7.3/samples/sample_building_kotlin_applications.html
+
+BUILD SUCCESSFUL in 19m 54s
+2 actionable tasks: 2 executed
+```
+Poniżej znajduje się struktura stworzonego przez nas projektu: 
+
+```
+
+├── app
+|   ├── build.gradle 
+│   └── src
+│       ├── main
+│       │   └── kotlin 
+│       |           └── kick_start
+│       |                  └── App.kt
+│       └── test
+│           └── kotlin 
+│                   └── kick_start
+│                          └── AppTest
+├── gradle
+│   └── wrapper
+|       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew 
+├── gradlew.bat 
+└── settings.gradle 
+```
+
+Dzięki `gradle init` uzyskaliśmy konfigurację projektu, dzięki czemu możemy teraz zbudować aplikację w Kotlinie :D 
+
+### Przejrzenie utworzonych plików
+Poprzednie dwa kroki wystarczą, aby rozpocząć tworzenie aplikacji. Jeśli jednak chcemy zrozumieć, czym są, co zawierają i co robią utworzone pliki, w tym podrozdziale skupimy się właśnie na nich. 
+
+
 ## Bibliografia 
 - https://docs.gradle.org/current/userguide/what_is_gradle.html
+- https://docs.gradle.org/current/userguide/getting_started.html
+- https://docs.gradle.org/current/userguide/installation.html
+- https://docs.gradle.org/current/samples/sample_building_kotlin_applications.html
 
