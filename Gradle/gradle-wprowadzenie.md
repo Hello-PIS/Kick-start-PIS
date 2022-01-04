@@ -92,13 +92,99 @@ Poniżej znajduje się struktura stworzonego przez nas projektu:
 
 Dzięki `gradle init` uzyskaliśmy konfigurację projektu, dzięki czemu możemy teraz zbudować aplikację w Kotlinie :D 
 
+### Uruchomienie aplikacji
+Wreszcie możemy uruchomić naszą aplikację bezpośrednio z wiersza poleceń za pomocą `./gradlew run`.  Po uruchomieniu stworzonej przez nas wcześniej aplikacji uzyskamy poniższy wynik:
+
+```
+> Task :app:compileKotlin
+'compileJava' task (current target is 15) and 'compileKotlin' task (current target is 1.8) jvm target compatibility should be set to the same Java version.
+
+> Task :app:run
+Hello World!
+
+BUILD SUCCESSFUL in 20s
+2 actionable tasks: 2 executed
+```
+
+### Dodatkowe polecenia Gradle
+Istnieje więcej poleceń Gradle. Tutaj omówię jeszcze jedno - `./gradlew build`. Polecenie to spakuje naszą aplikację wraz ze wszystkimi zależnościami. Dzięki temu będzie można uruchomić aplikację za pomocą jednego polecenia. Po wykonaniu powyższego polecenia dla stworzonej przez nas aplikacji powstały archiwa w dwóch formatach (`.tar` oraz `.zip`). Znajdują się one w folderze `app/build/distributions`. 
+
+Jeśli używamy *gradlew* nie potrzebujemy instalować Gradle lokalnie, co jest bardzo dużą zaletą tego rozwiązania. Dodatkowo spakowany plik, który wygenerujemy będzie spójny za każdym razem. Jest to szczególnie ważne podczas pracy w grupie, ponieważ każdy może posiadać inną wersję Gradle na swoim komputerze. 
+
+Powyższe polecenie możemy uruchomić również z flagą `--scan`, dzięki czemu możemy zobaczyć szczegóły co zostało wykonane - jakie zadania zostały wykonane, jakie zależności zostały pobrane itp.  Skan kompilacji zostanie opublikowany na stronie, a link do niej zostanie nam podany po zakończeniu wywołania polecenia. Poniższej znajduje się screen ze strony zawierającej szczegóły odnośnie naszego przykładowego projektu:
+
+![Skan](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/scan.png)
+
+
 ### Przejrzenie utworzonych plików
-Poprzednie dwa kroki wystarczą, aby rozpocząć tworzenie aplikacji. Jeśli jednak chcemy zrozumieć, czym są, co zawierają i co robią utworzone pliki, w tym podrozdziale skupimy się właśnie na nich. 
+Poprzednie dwa kroki wystarczą, aby rozpocząć tworzenie aplikacji. Jeśli jednak chcemy zrozumieć, czym są, co zawierają i co robią utworzone pliki. W tym podrozdziale skupimy się właśnie na nich. 
+
+Na początku spojrzymy na plik `settings.gradle`. 
+```kotlin
+rootProject.name = 'kick_start'  
+include('app')
+```
+
+Druga linia pliku definiuje z ilu podprojektów składa się nasz projekt - w tym przypadku jest to tylko jeden podprojekt `app`. Jeśli mielibyśmy projekt składający się z większej ilości podprojektów byłyby one dodane za pomocą kolejnych wyrażeń `include('name')`.
+
+Zgodnie z tym co opisałam w fazach budowania projektu, Gradle dla każdego podprojektu tworzy instancję , która przechowuje konfigurację danego podprojektu. W naszym przykładzie mamy tylko jeden podprojekt, więc możemy znaleźć w nim jedną instancję zawierającą konfigurację. Konfiguracja znajduje się w folderze `app` w pliku `build.gradle`.
+
+```kotlin
+plugins {  
+  id 'org.jetbrains.kotlin.jvm' version '1.5.31'  
+  
+  id 'application'  
+}  
+  
+repositories {   
+  mavenCentral()  
+}  
+  
+dependencies {  
+  implementation platform('org.jetbrains.kotlin:kotlin-bom')  
+  
+  implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'  
+  
+  implementation 'com.google.guava:guava:30.1.1-jre'  
+  
+  testImplementation 'org.jetbrains.kotlin:kotlin-test'  
+  
+  testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'  
+}  
+  
+application {   
+  mainClass = 'kick_start.AppKt'  
+}
+```
+
+W `plugins` zostały zaimplementowane wszystkie wtyczki potrzebne do działania naszego projektu:
+- `org.jetbrains.kotlin.jvm` - dodaje obsługę Kotlina,
+- `application` - dodaje obsługę tworzenia aplikacji.
+
+W `repositories` deklarowane są publicznie dostępne repozytoria - w tym przypadku jest to `mavenCentral`, który zawiera biblioteki open source.
+
+W `dependencies` zarządzamy zależnościami:
+- biblioteka `kotlin-bom` wyrównuje wszystkie komponenty z tej samej wersji,
+- `org.jetbrains.kotlin:kotlin-stdlib-jdk8` definiuje, iż chcemy skorzystać ze standardowej biblioteki Kotlin JDK8,
+- `com.google.guava:guava:30.1.1-jre` - definiuje, iż chcemy skorzystać w naszej aplikacji z Guavy. Guava to zestaw podstawowych bibliotek Google dla języka Java,
+- `org.jetbrains.kotlin:kotlin-test` - definiuje, iż chcemy skorzystać z biblioteki testowej Kotlin,
+- `org.jetbrains.kotlin:kotlin-test-junit` - definiuje, iż chcemy skorzystać z Kotlin JUnit.
+
+W `application` zdefiniowana jest główna klasa aplikacji, czyli `kick_start.AppKt`.
+
+
+
+
 
 
 ## Bibliografia 
-- https://docs.gradle.org/current/userguide/what_is_gradle.html
-- https://docs.gradle.org/current/userguide/getting_started.html
-- https://docs.gradle.org/current/userguide/installation.html
-- https://docs.gradle.org/current/samples/sample_building_kotlin_applications.html
+ - https://docs.gradle.org/current/userguide/what_is_gradle.html
+ - https://docs.gradle.org/current/userguide/getting_started.html
+ - https://docs.gradle.org/current/userguide/installation.html
+ - https://docs.gradle.org/current/samples/sample_building_kotlin_applications.html
+ - https://docs.gradle.org/current/userguide/declaring_repositories.html
+ - https://docs.gradle.org/current/userguide/dependency_management.html
+ - https://stackoverflow.com/questions/59790315/what-does-kotlin-bom-library-do
+ - https://github.com/google/guava
+ - https://tomgregory.com/gradle-vs-gradlew-difference/
 
