@@ -10,7 +10,7 @@ Ten poradnik powie wam jak napisać podstawową aplikację internetową w język
 
 ## Dlaczego Kotlin?
 
-Kotlin to całkiem nowy język, który początkowo miał być równie bogaty w funkcjonalności co Scala, a jednocześnie kompilować i uruchamiać się znacznie od niej szybciej. Według mnie, posiada on jedną z najprostszych i najbardziej zrozumiałych składni ze wszystkich języków, nie tracąc na tym znacznie na prędkości ani stabilności napisanych programów. Dodatkowo, większość stosowanych wydań Kotlina jest oparta na JVM'ie, co ma swoje wady i zalety, ale jedną z większych zalet tego rozwiązanie jest dostęp do bogactwa bibliotek Javy, która ma ich bardzo, bardzo dużo.
+Kotlin to całkiem nowy język, który początkowo miał być równie bogaty w funkcjonalności co Scala, a jednocześnie kompilować i uruchamiać się znacznie od niej szybciej. Według mnie, posiada on jedną z najprostszych i najbardziej zrozumiałych składni ze wszystkich języków, nie tracąc na tym znacznie na prędkości ani stabilności napisanych programów. Dodatkowo, większość stosowanych wydań Kotlina jest oparta na JVM'ie, co ma swoje wady i zalety. Jedną z większych zalet tego rozwiązanie jest dostęp do bogactwa bibliotek Javy, która ma ich bardzo, bardzo dużo.
 
 ## Dlaczego Spring Boot?
 
@@ -93,7 +93,7 @@ Następny plik znajduje się w src/main/resources/application.properties
 
 Obecnie jest on pusty, jednak to jest miejsce, w którym będziemy mogli zdefiniować większość zmiennych konfiguracyjnych - typu adres bazy danych, jej rodzaj, adresy innych naszych usług itp.
 
-Ostatni z plików znajduje się w src/test/kotlin/.../DemoApplicationTests.kt
+Ostatni z plików znajduje się w src/test/kotlin/com/example/demo/DemoApplicationTests.kt
 
 ![DemoApplicationTests.kt](photos/DemoApplicationTests.png)
 
