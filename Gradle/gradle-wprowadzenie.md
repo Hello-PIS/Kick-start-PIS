@@ -12,7 +12,6 @@ Poniższy artykuł poświęcony jest narzędziu służącemu do budowy projektó
 	 5. [Przejrzenie utworzonych plików](#przejrzenie-utworzonych-plików) 
  5. [Bibliografia ](#bibliografia )
 
-
 ## Czym w ogóle jest Gradle? 
 Zgodnie z opisem podanym przez twórcę Gradle jest narzędziem do automatyzacji kompilacji do tworzenia oprogramowania w wielu językach. Opisując Gradla własnymi słowami powiedziałabym, iż jest to elastyczne narzędzie, które służy do budowy projektów. 
 
@@ -127,7 +126,6 @@ Powyższe polecenie możemy uruchomić również z flagą `--scan`, dzięki czem
 
 ![Skan](https://github.com/Hello-PIS/Kick-start-PIS/blob/main/Gradle/photos/scan.PNG)
 
-
 ### Przejrzenie utworzonych plików
 Poprzednie dwa kroki wystarczą, aby rozpocząć tworzenie aplikacji. Jeśli jednak chcemy zrozumieć, czym są, co zawierają i co robią utworzone pliki. W tym podrozdziale skupimy się właśnie na nich. 
 
@@ -183,11 +181,6 @@ W `dependencies` zarządzamy zależnościami:
 - `org.jetbrains.kotlin:kotlin-test-junit` - definiuje, iż chcemy skorzystać z Kotlin JUnit.
 
 W `application` zdefiniowana jest główna klasa aplikacji, czyli `kick_start.AppKt`.
-
-
-
-
-
 
 ## Bibliografia 
  - https://docs.gradle.org/current/userguide/what_is_gradle.html
