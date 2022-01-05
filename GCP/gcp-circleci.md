@@ -77,7 +77,7 @@ Aby stworzyć nową maszynę wirualną z *`Menu`*  wybieramy *`Compute Engine`*.
 W powyższym panelu ustalamy nazwę maszyny, region oraz strefę.
 Podczas tworzenia maszyny wirtualnej ustalamy ustawienia maszyny, rodzaj procesora, pojemność dysku oraz system operacyjny. Elementy te mają wpływ na koszt instancji, dlatego należy wybierać je mądrze, i nie wybierać ustawień ponad nasze potrzeby. Przewidywana miesięczna kwota znajduje się w prawym górnym rogu.
 
-Konfiguracja maszyny - wypieramy rodzaj predefiniowanych maszyn w zależności od potrzeb projektu. Wskazujemy serie oraz typ maszyny.
+Konfiguracja maszyny - wybieramy rodzaj predefiniowanych maszyn w zależności od potrzeb projektu. Wskazujemy serie oraz typ maszyny.
 ![GCP dodanie VM cd](./photos/gcp_vm_2.png)
 
 Dysk rozruchowy - panel ten umożliwia zmianę systemu operacyjnego oraz jego wersję. Ustalamy również typ dysku oraz rozmiar.
