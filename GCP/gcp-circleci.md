@@ -68,9 +68,9 @@ Aby dodać konto, adres użytkownika musi być kontem Google. W sekcji *`Nowe po
 Na podany email zostanie przesłany email który umożliwi dostęp do projektu.
 
 #### Stworzenie Compute Engine
-Compute Engine jest usługa maszyn wirtualnych w infrastrukturze Google, jest to usługa IaaS. W Compute Engine możemy uruchomić dowolną instancję, np. hostowania aplikacji/serwera. 
+Compute Engine jest usługą maszyn wirtualnych w infrastrukturze Google. W Compute Engine możemy uruchomić dowolny program, np. umożliwia nam hostowanie naszej aplikacji. 
 
-Aby stworzyć naszą maszynę wirualną z *`Menu`*  wybieramy *`Compute Engine`*. Następnie w sekcji *`Instancje maszyn wirtualnych`* wybieramy przycisk **`UTWÓRZ INSTANCJĘ`**. Zostaniemy przeniesieni do panelu konfiguracyjnego.
+Aby stworzyć nową maszynę wirualną z *`Menu`*  wybieramy *`Compute Engine`*. Następnie w sekcji *`Instancje maszyn wirtualnych`* wybieramy przycisk **`UTWÓRZ INSTANCJĘ`**. Zostaniemy przeniesieni do panelu konfiguracyjnego.
 
 ![GCP dodanie VM](./photos/gcp_vm_1.png)
 
@@ -80,7 +80,7 @@ Podczas tworzenia maszyny wirtualnej ustalamy ustawienia maszyny, rodzaj proceso
 Konfiguracja maszyny - wypieramy rodzaj predefiniowanych maszyn w zależności od potrzeb projektu. Wskazujemy serie oraz typ maszyny.
 ![GCP dodanie VM cd](./photos/gcp_vm_2.png)
 
-Dysk rozruchowy - panel ten umożliwia zmienię systemu operacyjnego oraz jego wersję. Ustalamy również typ dysku oraz rozmiar.
+Dysk rozruchowy - panel ten umożliwia zmianę systemu operacyjnego oraz jego wersję. Ustalamy również typ dysku oraz rozmiar.
 Zapora sieciowa - zaznaczamy nasłuchiwanie portów HTTP i HTTPS.
 
 Po zakończeniu konfiguracji klikamy **`UTWÓRZ`**, i już po chwili mamy dostęp do naszej maszyny wirtualnej.
@@ -159,14 +159,14 @@ Za pomocą persist_to_workspace przechowujemy nasz plik tymczasowy, który ma by
             - server/hello.jar
 ```
 
-Na zakończenie (czas najwyższy :wink:), po zapisani pliku .jar, możemy przejść do deploymentu naszego pliku. Według wcześniejszych kroków dokonujemy autoryzacji. Wykorzystujemy *attach_workspace*, który służący do dołączenia obszaru roboczego workflow do bieżącego kontenera. Cała zawartość przestrzeni roboczej jest pobierana i kopiowana do bieżącej przestrzeni roboczej. 
+Na zakończenie (czas najwyższy :wink:), po zapisani pliku .jar, możemy przejść do deploymentu naszego pliku. Według wcześniejszych kroków dokonujemy autoryzacji. Wykorzystujemy *attach_workspace*, który służący do dołączenia przestrzeni roboczej workflow'a do bieżącego kontenera. Cała zawartość dołączanej przestrzeni roboczej jest pobierana i kopiowana do bieżącej przestrzeni roboczej. 
 Do przesłania pliku wykorzystujemy gcloud compute scp, który umożliwia kopiowanie plików do i z maszyn wirtualnych Google Compute Engine za pomocą scp.
 ```
 gcloud --quiet compute scp --recurse /tmp/app/server/hello.jar $USER@pis:~/pis
 ```
 
 Aby uruchomić nasz program z poziomu CircleCI możemy posłużyć się gcloud compute ssh, przez podanie komend bashowych.
-Poniższy kod ubija (jeśli taki istenieje) działający serwer na porcie 8080 a następnie uruchamia nasz nowy serwer w tle.
+Poniższy kod wyłącza (jeśli taki istenieje) działający serwer na porcie 8080 a następnie uruchamia nasz nowy serwer w tle.
 ```
   deploy:
     docker:
@@ -191,7 +191,7 @@ Poniższy kod ubija (jeśli taki istenieje) działający serwer na porcie 8080 a
             gcloud --quiet compute ssh $USER@pis --strict-host-key-checking=no --command "exit"
 ```
 #### Compute Engine
-Jak widzimy początkowo na maszynie wirtualnej nie mamy naszego pliku .jar. Po wprowadzeniu zmian w serwerze na gicie, uruchamiany jest CircleCI, który dokonuje deployment na GCP. Po krótkiej chwili mamy nasz plik .jar, oraz działający serwer.
+Jak widzimy początkowo na maszynie wirtualnej nie mamy naszego pliku .jar. Po wprowadzeniu zmian w kodzie źródłowym serwera na gicie, uruchamiany jest CircleCI, który dokonuje deployment na GCP. Po krótkiej chwili mamy nasz plik .jar oraz działający serwer.
 
 <img src="./photos/vm_deploy.png" width="400" height="300">
 
